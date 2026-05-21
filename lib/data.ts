@@ -60,27 +60,19 @@ export const looks: Look[] = [
     products: [
       {
         id: "nami-linen-shirt",
-        name: "oversized linen shirt / ecru",
-        price_usd: 64,
+        name: "Halter Mini Dress",
+        price_usd: 23.99,
         image_url:
-          "https://images.unsplash.com/photo-1620799139507-2a76f79a2f4d?w=1200&q=70&auto=format&fit=crop",
-        amazon_affiliate_url: amazon("B0XXXXXXXX"),
-      },
-      {
-        id: "nami-denim-mini",
-        name: "stonewash denim mini",
-        price_usd: 48,
-        image_url:
-          "https://images.unsplash.com/photo-1551316679-9c6ae9dec224?w=1200&q=70&auto=format&fit=crop",
-        amazon_affiliate_url: amazon("B0XXXXXXXX"),
+          "https://m.media-amazon.com/images/I/61-NVd3p3HL._AC_SY741_.jpg",
+        amazon_affiliate_url: amazon("B0GKZJLVX3"),
       },
       {
         id: "nami-sandal",
-        name: "leather thong sandal / tan",
-        price_usd: 52,
+        name: "Red High Heels",
+        price_usd: 59.99,
         image_url:
-          "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1200&q=70&auto=format&fit=crop",
-        amazon_affiliate_url: amazon("B0XXXXXXXX"),
+          "https://m.media-amazon.com/images/I/71dRfF-gq-L._AC_SY625_.jpg",
+        amazon_affiliate_url: amazon("B0FGXVFS95"),
       },
       {
         id: "nami-canvas-tote",
@@ -177,16 +169,16 @@ export const looks: Look[] = [
 
   {
     characterName: "Nobara",
-    tagline: "sharp — denim, scarf, boot. urban exorcist.",
+    tagline: "Jujustu Kaisen",
     image_url:
-      "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=1600&q=70&auto=format&fit=crop",
+      "https://amzn.to/4uptV6G",
     products: [
       {
         id: "nobara-denim-jacket",
-        name: "boxy denim jacket / indigo",
+        name: "Casual Blazer Jacket",
         price_usd: 96,
         image_url:
-          "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=1200&q=70&auto=format&fit=crop",
+          "https://m.media-amazon.com/images/I/61Tz8je24vL._AC_SX679_.jpg",
         amazon_affiliate_url: amazon("B0XXXXXXXX"),
       },
       {
