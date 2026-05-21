@@ -37,11 +37,11 @@ export default function CharacterLook({
 
             {/* Character name + tagline — bottom-left over imagery */}
             <div className="pointer-events-none absolute inset-x-5 bottom-6 z-10 md:inset-x-10 md:bottom-12">
-              <h2 className="font-display text-[40px] font-medium leading-[0.98] tracking-[-0.035em] text-zf-bone md:text-[64px]">
+              <h2 className="font-display text-[40px] font-medium leading-[0.98] tracking-[-0.035em] text-zf-black md:text-[64px]">
                 {look.characterName}
               </h2>
               {look.tagline && (
-                <p className="mt-2 max-w-[36ch] font-body text-[12px] leading-[1.4] text-zf-bone/80 md:mt-3 md:text-[13px]">
+                <p className="mt-2 max-w-[36ch] font-body text-[12px] leading-[1.4] text-zf-black/90 md:mt-3 md:text-[13px]">
                   {look.tagline}
                 </p>
               )}
