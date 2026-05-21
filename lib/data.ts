@@ -103,57 +103,57 @@ export const looks: Look[] = [
 
   {
     characterName: "Mikasa",
-    tagline: "soldier — clean black layers, technical outerwear.",
+    tagline: "Attack on Titan",
     image_url:
       "/looks/Mikasa.png",
     products: [
       {
         id: "mikasa-shell-jacket",
-        name: "technical shell jacket / black",
-        price_usd: 142,
+        name: "Military Cropped Jacket",
+        price_usd: 43.99,
         image_url:
-          "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=1200&q=70&auto=format&fit=crop",
-        amazon_affiliate_url: amazon("B0XXXXXXXX"),
+          "https://m.media-amazon.com/images/I/81YQnrs05tL._AC_SX569_.jpg",
+        amazon_affiliate_url: amazon("B0D72ZNRMC"),
       },
       {
-        id: "mikasa-merino-turtleneck",
-        name: "merino turtleneck / charcoal",
-        price_usd: 68,
+        id: "Cargo Jeans High Waist",
+        name: "Cargo Jeans High Waist",
+        price_usd: 39.99,
         image_url:
-          "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=1200&q=70&auto=format&fit=crop",
-        amazon_affiliate_url: amazon("B0XXXXXXXX"),
+          "https://m.media-amazon.com/images/I/61vatkLhl3L._AC_SY741_.jpg",
+        amazon_affiliate_url: amazon("B0D7ZJ2WH4"),
       },
       {
-        id: "mikasa-cargo",
-        name: "tapered cargo trouser / black",
-        price_usd: 88,
+        id: "Knee High Flat Boots",
+        name: "Knee High Flat Boots",
+        price_usd: 70.70,
         image_url:
-          "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=1200&q=70&auto=format&fit=crop",
-        amazon_affiliate_url: amazon("B0XXXXXXXX"),
+          "https://m.media-amazon.com/images/I/61jXNo1twCL._AC_SY625_.jpg",
+        amazon_affiliate_url: amazon("B0BR698H7B"),
       },
       {
-        id: "mikasa-trail-runner",
-        name: "trail runner / triple black",
-        price_usd: 96,
+        id: "Body Chain Belt",
+        name: "Body Chain Belt",
+        price_usd: 15.99,
         image_url:
-          "https://images.unsplash.com/photo-1539185441755-769473a23570?w=1200&q=70&auto=format&fit=crop",
-        amazon_affiliate_url: amazon("B0XXXXXXXX"),
+          "https://m.media-amazon.com/images/I/51+KjucFp+L._AC_SX679_.jpg",
+        amazon_affiliate_url: amazon("B09KXJ8PNC"),
       },
       {
-        id: "mikasa-shell-jacket",
-        name: "technical shell jacket / black",
-        price_usd: 142,
+        id: "Crossbody Triangle Chest Pack",
+        name: "Crossbody Triangle Chest Pack",
+        price_usd: 52,
         image_url:
-          "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=1200&q=70&auto=format&fit=crop",
-        amazon_affiliate_url: amazon("B0XXXXXXXX"),
+          "https://m.media-amazon.com/images/I/61LSkIY-skL._AC_SL1500_.jpg",
+        amazon_affiliate_url: amazon("B0FDGHZ3H9"),
       },
       {
-        id: "mikasa-shell-jacket",
-        name: "technical shell jacket / black",
-        price_usd: 142,
+        id: "Red Winter Scarf",
+        name: "Winter Scarf",
+        price_usd: 21.98,
         image_url:
-          "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=1200&q=70&auto=format&fit=crop",
-        amazon_affiliate_url: amazon("B0XXXXXXXX"),
+          "https://m.media-amazon.com/images/I/91+zHDSNscL._AC_SY741_.jpg",
+        amazon_affiliate_url: amazon("B01D2J52QC"),
       },
     ],
   },
