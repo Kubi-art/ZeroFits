@@ -1,98 +1,75 @@
 # zerofits
 
-A premium, minimalist, dark-mode lookbook that converts TikTok traffic into Amazon Associates sales. Built with Next.js 14 (App Router), TypeScript, and Tailwind.
+A hyper-minimalist, single-page anime lookbook. Scroll through characters, tap a look, shop every piece on Amazon. Built with Next.js 14 (App Router), TypeScript, and Tailwind.
 
 ## Quick start
 
 ```bash
 npm install
-npm run dev
+npm run dev          # http://localhost:3000
 ```
-
-Open <http://localhost:3000>.
 
 ## Deploy to Vercel
 
-1. Push the contents of this folder to a GitHub repo.
+1. Push this folder to a GitHub repo.
 2. Go to <https://vercel.com/new>, pick the repo, accept the auto-detected Next.js defaults, click **Deploy**.
-3. There are **no required env vars** — every product link is configured in `lib/data.ts`.
+3. No env vars required — every product link is configured in `lib/data.ts`.
 
-Custom domain → Vercel project → *Settings → Domains*.
+## Architecture
 
-## Where to edit things
+One route. One file does everything visible:
 
-| Want to change... | File |
-|---|---|
-| Products, prices, Amazon links | `lib/data.ts` |
-| The Amazon Associates tag (one place, every link) | `lib/data.ts` — `ASSOCIATES_TAG` |
-| Looks (which products belong to which look) | `lib/data.ts` — `looks` |
-| Colour palette, fonts | `tailwind.config.ts` + `app/globals.css` |
-| Header / footer chrome | `components/Header.tsx`, `components/Footer.tsx` |
-| The "Buy on Amazon" button itself | `components/AmazonCTA.tsx` |
-| Homepage layout | `app/page.tsx` |
-| Look detail layout | `app/looks/[id]/page.tsx` + `components/LookRow.tsx` |
-| Shop archive + filters | `app/shop/page.tsx` |
-| Product detail | `app/shop/[id]/page.tsx` |
+```
+app/
+  layout.tsx             ← global chrome (header + footer + fonts)
+  page.tsx               ← the entire site — maps over `looks[]`
+  globals.css            ← Tailwind + brand helpers
+  not-found.tsx
+components/
+  Header.tsx             ← wordmark + 2 social icons. nothing else.
+  Footer.tsx             ← wordmark + FTC line + copyright
+  CharacterLook.tsx      ← full-bleed hero + click-to-expand product grid
+  ProductCard.tsx        ← image / name / USD price / "Buy on Amazon"
+  AmazonCTA.tsx          ← the affiliate button — single source of truth
+  PlaceholderFrame.tsx   ← legacy helper (unused by current pages)
+lib/
+  data.ts                ← THE single source of truth
+```
 
-## Adding a product
+## Editing the lookbook
 
-In `lib/data.ts`, push a new entry into `products`:
+Open `lib/data.ts` and edit `looks[]`. Each character is one entry:
 
 ```ts
 {
-  id: "stussy-8ball",
-  brand: "stüssy",
-  name: "8-ball oversized tee",
-  price: 9800,
-  price_usd: 64,
-  image_url: "https://your-cdn.com/8ball.jpg",
-  amazon_affiliate_url: amazon("B0XXXXXXXX"), // <-- your ASIN
-  drop: "04",
-  tags: ["tee"],
+  characterName: "Mikasa",
+  tagline: "soldier — clean black layers, technical outerwear.",
+  image_url: "https://your-cdn.com/mikasa-hero.jpg",
+  products: [
+    {
+      id: "mikasa-shell-jacket",
+      name: "technical shell jacket / black",
+      price_usd: 142,
+      image_url: "https://your-cdn.com/shell.jpg",
+      amazon_affiliate_url: amazon("B0XXXXXXXX"), // your ASIN
+    },
+    // ... 3–5 products per look
+  ],
 }
 ```
+
+**Tip.** Change `ASSOCIATES_TAG` at the top of `data.ts` once — every Amazon URL built via `amazon(asin)` picks up the new tag automatically.
 
 If `image_url` lives on a new hostname, add it to `next.config.mjs` → `images.remotePatterns`.
 
 ## Affiliate compliance
 
-- Every Amazon link is rendered with `target="_blank" rel="sponsored noopener noreferrer"` (required by Amazon Associates + the FTC).
-- The `via amazon associates` eyebrow above each CTA is the per-link disclosure.
+- Every Amazon link is rendered with `target="_blank" rel="sponsored noopener noreferrer"`.
+- The "via amazon associates" eyebrow above each CTA is the per-link disclosure.
 - The footer carries the *"we earn from qualifying purchases"* line on every page.
-- The Associates tag is appended at the data layer (`amazon()`), never hand-typed into URLs.
-
-## File map
-
-```
-.
-├── app/
-│   ├── layout.tsx              ← global chrome (Header + Footer + fonts)
-│   ├── page.tsx                ← home / lookbook feed
-│   ├── globals.css             ← Tailwind base + brand helpers
-│   ├── not-found.tsx           ← 404
-│   ├── looks/[id]/page.tsx     ← editorial look detail
-│   └── shop/
-│       ├── page.tsx            ← archive + filter rail
-│       └── [id]/page.tsx       ← single-product detail (TikTok landing)
-├── components/
-│   ├── Header.tsx
-│   ├── Footer.tsx
-│   ├── AmazonCTA.tsx           ← the conversion surface
-│   ├── PlaceholderFrame.tsx    ← styled gradient until real photos arrive
-│   ├── ProductTile.tsx
-│   ├── LookFeedCard.tsx        ← homepage full-bleed card
-│   └── LookRow.tsx             ← editorial 5/12 + 7/12 look composition
-├── lib/
-│   └── data.ts                 ← THE single source of truth
-├── tailwind.config.ts
-├── postcss.config.mjs
-├── next.config.mjs
-├── tsconfig.json
-└── package.json
-```
+- The Associates tag lives in `data.ts`, never hand-typed into URLs.
 
 ## What's still placeholder
 
-- All `image_url`s point at Unsplash. Replace with real product / look photography that matches the cool, low-contrast grade in the design system's `imagery-notes.md`.
-- All ASINs are `B0XXXXXXXX`. Swap in real ASINs (and rotate the `ASSOCIATES_TAG` once your account is approved).
-- The logo is a typographic wordmark in Space Grotesk — drop a real mark in `app/layout.tsx` or `components/Header.tsx` when you have one.
+- All `image_url`s point at Unsplash. Replace with your real AI-generated character renders + product photography.
+- All ASINs are `B0XXXXXXXX`. Swap them in once you have real Amazon listings.

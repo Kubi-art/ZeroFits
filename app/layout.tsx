@@ -21,13 +21,13 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "zerofits — a quiet wardrobe for the long walk home",
+  title: "zerofits — shop the look",
   description:
-    "ZeroFits is a curated lookbook of streetwear-adjacent fashion. Every piece links to a verified Amazon listing.",
+    "An interactive anime lookbook. Tap a look — shop every piece on Amazon.",
   metadataBase: new URL("https://zerofits.example.com"),
   openGraph: {
     title: "zerofits",
-    description: "anime-fluent streetwear · curated for the long walk home",
+    description: "shop the look — every piece on amazon.",
     type: "website",
   },
 };
