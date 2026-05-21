@@ -56,7 +56,7 @@ export const looks: Look[] = [
     characterName: "Nami",
     tagline: "One Piece",
     image_url:
-      "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1600&q=70&auto=format&fit=crop",
+      "/looks/Nami.png",
     products: [
       {
         id: "nami-linen-shirt",
@@ -162,7 +162,7 @@ export const looks: Look[] = [
     characterName: "Nezuko",
     tagline: "softer silhouette — cream knits, washed pinks.",
     image_url:
-      "https://images.unsplash.com/photo-1551316679-9c6ae9dec224?w=1600&q=70&auto=format&fit=crop",
+      "/looks/Nezuko.png",
     products: [
       {
         id: "nezuko-cardigan",
@@ -211,7 +211,7 @@ export const looks: Look[] = [
     characterName: "Nobara",
     tagline: "Jujustu Kaisen",
     image_url:
-      "https://amzn.to/4uptV6G",
+      "/looks/Nobara.png",
     products: [
       {
         id: "nobara-denim-jacket",
