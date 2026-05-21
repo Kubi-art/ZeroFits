@@ -71,16 +71,32 @@ export const looks: Look[] = [
         name: "Red High Heels",
         price_usd: 59.99,
         image_url:
-          "https://m.media-amazon.com/images/I/71dRfF-gq-L._AC_SY625_.jpg",
+          "https://m.media-amazon.com/images/I/71HGuLct-ZL._AC_SY625_.jpg",
         amazon_affiliate_url: amazon("B0FGXVFS95"),
       },
       {
         id: "nami-canvas-tote",
-        name: "canvas tote / weathered",
-        price_usd: 28,
+        name: "Womens Newsboy Cap",
+        price_usd: 16.98,
         image_url:
-          "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=1200&q=70&auto=format&fit=crop",
-        amazon_affiliate_url: amazon("B0XXXXXXXX"),
+          "https://m.media-amazon.com/images/I/61xg2WJmLqL._AC_SX679_.jpg",
+        amazon_affiliate_url: amazon("B0D9669JFF"),
+      },
+      {
+        id: "Metallic Red Purses",
+        name: "Metallic Red Purses",
+        price_usd: 22.99,
+        image_url:
+          "https://m.media-amazon.com/images/I/61QsuYGIJ2L._AC_SY675_.jpg",
+        amazon_affiliate_url: amazon("B0F1KVQTRX"),
+      },
+      {
+        id: "Gold Bangle Bracelets",
+        name: "Gold Bangle Bracelets",
+        price_usd: 12.99,
+        image_url:
+          "https://m.media-amazon.com/images/I/71x-c2F5AVL._AC_SY695_.jpg",
+        amazon_affiliate_url: amazon("B0F1K9GK4P"),
       },
     ],
   },
