@@ -36,7 +36,7 @@ export type Look = {
 // Amazon Associates tag — change this in ONE place.
 // All Amazon links derive from `amazon(asin)`.
 // ------------------------------------------------------------
-export const ASSOCIATES_TAG = "zerofits-20";
+export const ASSOCIATES_TAG = "zerofits-21";
 
 /** Build an Amazon Associates URL from an ASIN. */
 export function amazon(asin: string): string {
