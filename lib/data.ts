@@ -54,7 +54,7 @@ export function formatUsd(n: number): string {
 export const looks: Look[] = [
   {
     characterName: "Nami",
-    tagline: "navigator — layered linens, sand-bleached denim.",
+    tagline: "One Piece",
     image_url:
       "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1600&q=70&auto=format&fit=crop",
     products: [
@@ -105,7 +105,7 @@ export const looks: Look[] = [
     characterName: "Mikasa",
     tagline: "soldier — clean black layers, technical outerwear.",
     image_url:
-      "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=1600&q=70&auto=format&fit=crop",
+      "/looks/Mikasa.png",
     products: [
       {
         id: "mikasa-shell-jacket",
@@ -139,6 +139,22 @@ export const looks: Look[] = [
           "https://images.unsplash.com/photo-1539185441755-769473a23570?w=1200&q=70&auto=format&fit=crop",
         amazon_affiliate_url: amazon("B0XXXXXXXX"),
       },
+      {
+        id: "mikasa-shell-jacket",
+        name: "technical shell jacket / black",
+        price_usd: 142,
+        image_url:
+          "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=1200&q=70&auto=format&fit=crop",
+        amazon_affiliate_url: amazon("B0XXXXXXXX"),
+      },
+      {
+        id: "mikasa-shell-jacket",
+        name: "technical shell jacket / black",
+        price_usd: 142,
+        image_url:
+          "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=1200&q=70&auto=format&fit=crop",
+        amazon_affiliate_url: amazon("B0XXXXXXXX"),
+      },
     ],
   },
 
@@ -170,6 +186,14 @@ export const looks: Look[] = [
         price_usd: 84,
         image_url:
           "https://images.unsplash.com/photo-1614252369475-531eba835eb1?w=1200&q=70&auto=format&fit=crop",
+        amazon_affiliate_url: amazon("B0XXXXXXXX"),
+      },
+      {
+        id: "nezuko-ribbon-clip",
+        name: "silk ribbon hair clip / coral",
+        price_usd: 18,
+        image_url:
+          "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1200&q=70&auto=format&fit=crop",
         amazon_affiliate_url: amazon("B0XXXXXXXX"),
       },
       {
@@ -219,6 +243,22 @@ export const looks: Look[] = [
         price_usd: 108,
         image_url:
           "https://images.unsplash.com/photo-1614252369475-531eba835eb1?w=1200&q=70&auto=format&fit=crop",
+        amazon_affiliate_url: amazon("B0XXXXXXXX"),
+      },
+      {
+        id: "nobara-silk-scarf",
+        name: "silk neck scarf / olive",
+        price_usd: 24,
+        image_url:
+          "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1200&q=70&auto=format&fit=crop",
+        amazon_affiliate_url: amazon("B0XXXXXXXX"),
+      },
+      {
+        id: "nobara-silk-scarf",
+        name: "silk neck scarf / olive",
+        price_usd: 24,
+        image_url:
+          "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1200&q=70&auto=format&fit=crop",
         amazon_affiliate_url: amazon("B0XXXXXXXX"),
       },
       {
